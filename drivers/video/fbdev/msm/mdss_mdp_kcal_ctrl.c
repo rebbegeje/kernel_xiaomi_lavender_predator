@@ -526,7 +526,7 @@ static DEVICE_ATTR(kcal_val, S_IWUSR | S_IRUGO, kcal_val_show, kcal_val_store);
 static DEVICE_ATTR(kcal_cont, S_IWUSR | S_IRUGO, kcal_cont_show,
 	kcal_cont_store);
 
-Static int kcal_ctrl_probe(struct platform_device *pdev)
+static int kcal_ctrl_probe(struct platform_device *pdev)
 {
 	int ret;
 	struct kcal_lut_data *lut_data;
@@ -542,7 +542,7 @@ Static int kcal_ctrl_probe(struct platform_device *pdev)
 
 	lut_data->enable = 0x1;
 	lut_data->red = 236;
-	lut_data->green = 245;
+	lut_data->green = 246;
 	lut_data->blue = 256;
 	lut_data->minimum = 0x23;
 	lut_data->invert = 0x0;
