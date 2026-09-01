@@ -596,9 +596,6 @@ int hdd_regulatory_init(hdd_context_t *hdd_ctx, struct wiphy *wiphy)
 		hdd_err("incorrect BDF regulatory data");
 		return ret_val;
 	}
-	
-	reg_info->alpha2[0] = 'U';
-	reg_info->alpha2[1] = 'S';
 
 	hdd_regulatory_wiphy_init(hdd_ctx, reg_info, wiphy);
 
