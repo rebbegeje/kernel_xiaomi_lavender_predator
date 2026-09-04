@@ -526,8 +526,9 @@ static DEVICE_ATTR(kcal_val, S_IWUSR | S_IRUGO, kcal_val_show, kcal_val_store);
 static DEVICE_ATTR(kcal_cont, S_IWUSR | S_IRUGO, kcal_cont_show,
 	kcal_cont_store);
 
-static int kcal_ctrl_probe(struct platform_device *pdev)
+#include <linux/delay.h> // Pastikan header ini ada di bagian atas file untuk msleep
 
+static int kcal_ctrl_probe(struct platform_device *pdev)
 {
 	int ret;
 	struct kcal_lut_data *lut_data;
@@ -551,6 +552,8 @@ static int kcal_ctrl_probe(struct platform_device *pdev)
 	lut_data->sat = 255;
 	lut_data->val = 255;
 	lut_data->cont = 255;
+
+	msleep(2000);
 
 	mdss_mdp_kcal_update_pcc(lut_data);
 	mdss_mdp_kcal_update_pa(lut_data);
