@@ -542,15 +542,15 @@ static int kcal_ctrl_probe(struct platform_device *pdev)
 	platform_set_drvdata(pdev, lut_data);
 
 	lut_data->enable = 0x1;
-	lut_data->red = 236;
-	lut_data->green = 248;
-	lut_data->blue = 255;
+	lut_data->red = 225;
+	lut_data->green = 235;
+	lut_data->blue = 248;
 	lut_data->minimum = 35;
 	lut_data->invert = 0x0;
 	lut_data->hue = 0x0;
-	lut_data->sat = 275;
+	lut_data->sat = 255;
 	lut_data->val = 251;
-	lut_data->cont = 258;
+	lut_data->cont = 255;
 
 	mdss_mdp_kcal_update_pcc(lut_data);
 	mdss_mdp_kcal_update_pa(lut_data);
