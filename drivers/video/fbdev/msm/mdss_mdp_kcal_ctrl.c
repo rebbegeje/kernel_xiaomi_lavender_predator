@@ -548,7 +548,7 @@ static int kcal_ctrl_probe(struct platform_device *pdev)
 	lut_data->minimum = 35;
 	lut_data->invert = 0x0;
 	lut_data->hue = 0x0;
-	lut_data->sat = 268;
+	lut_data->sat = 275;
 	lut_data->val = 251;
 	lut_data->cont = 258;
 
