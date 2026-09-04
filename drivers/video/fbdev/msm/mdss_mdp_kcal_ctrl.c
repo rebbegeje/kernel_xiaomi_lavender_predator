@@ -553,7 +553,7 @@ static int kcal_ctrl_probe(struct platform_device *pdev)
 	lut_data->val = 255;
 	lut_data->cont = 255;
 
-	msleep(2000);
+	msleep(20000);
 
 	mdss_mdp_kcal_update_pcc(lut_data);
 	mdss_mdp_kcal_update_pa(lut_data);
